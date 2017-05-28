@@ -1,0 +1,10 @@
+{
+  "name": "Idioms and Phrases",
+  "description": "Shows idiom of the day in the new tab.",
+  "version": "0.1",
+  "incognito": "split",
+  "chrome_url_overrides": {
+    "newtab": "new_tab_idiom.html"
+  },
+  "manifest_version": 2
+}
