@@ -8,50 +8,159 @@
     font-weight: 400;
   }
   main {
-    margin-top: 200px;
-    max-width: 760px;
+    margin-top: 250px;
+    max-width: 960px;
     margin-right: auto;
     margin-left: auto;
   }
 
   .extension-title {
-    font-size: 50px;
+    font-size: 26px;
+    font-weight: 100;
+    color: #ccc;
+    letter-spacing: 1px;
+    font-family: Arial, Helvetica, sans-serif;
   }
 
   .idiom-title {
-    font-size: 40px;
+    font-size: 50px;
   }
 
   .idiom-meaning {
-    font-size: 22px;
+    font-size: 28px;
     padding-left: 20px;
   }
 
   .idiom-example {
-    font-size: 22px;
+    font-size: 24px;
     font-style: italic;
     padding-left: 20px;
   }
 
+  .hidden {
+    display: none;
+  }
+
+  @keyframes placeHolderShimmer{
+      0%{
+          background-position: -960px 0
+      }
+      100%{
+          background-position: 960px 0
+      }
+  }
+
+  .animated-background {
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-iteration-count: infinite;
+      animation-name: placeHolderShimmer;
+      animation-timing-function: linear;
+      background: #f6f7f8;
+      background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+      background-size: 960px 104px;
+      height: 195px;
+      position: relative;
+  }
+  .background-masker {
+    background: #fff;
+    position: absolute;
+  }
+
+  /* Every thing below this is just positioning */
+
+  .background-masker.content-top {
+    top: 60px;
+    left: 0;
+    right: 0;
+    height: 40px;
+  }
+
+  .background-masker.content-first-end {
+    width: auto;
+    left: 700px;
+    right: 0;
+    top: 100px;
+    height: 35px;
+  }
+
+  .background-masker.content-header-end {
+    width: auto;
+    left: 300px;
+    right: 0;
+    top: 0px;
+    height: 60px;
+  }
+
+  .background-masker.content-second-line {
+    top: 135px;
+    left: 0;
+    right: 0;
+    height: 25px;
+  }
+
+  .background-masker.content-second-end {
+    width: auto;
+    left: 625px;
+    right: 0;
+    top: 160px;
+    height: 35px;
+  }
+
+  footer {
+    position: absolute;
+    right: 15px;
+    bottom: 10px;
+    font-size: 14px;
+    color: #ccc;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  footer a, a:visited, a:focus {
+    cursor: pointer;
+    text-decoration: none;
+    color: #ccc;
+  }
+  footer a:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #aaa;
+  }
 
   </style>
+  <script src="jquery-3.2.1.min.js"></script>
+  <script src="idiom.js"></script>
  </head>
  <body>
  <main>
   <header class="extension-title">
-    <p> Idiom of the day! </p>
+    <p> IDIOM OF THE DAY </p>
   </header>
-  <section class="idiom-body">
-    <p class="idiom-title">
+  <section id="idiom-body-placeholder" class="idiom-body-placeholder animated-background">
+      <div class="background-masker content-header-end"></div>
+      <div class="background-masker content-top"></div>
+      <div class="background-masker content-first-end"></div>
+      <div class="background-masker content-second-line"></div>
+      <div class="background-masker content-second-end"></div>
+      <div class="background-masker content-third-line"></div>
+      <div class="background-masker content-third-end"></div>
+  </section>
+  <section id="idiom-body" class="idiom-body hidden">
+    <p class="idiom-title" id="idiom-title">
       ballpark figure
     </p>
-    <p class="idiom-meaning">
-      a number which is only approximate, but quite close to the correct number 
+    <p class="idiom-meaning" id="idiom-meaning">
+      a number which is only approximate, but quite close to the correct number
     </p>
-    <p class="idiom-example">
-      e.g. He needs a ballpark figure for the project from us.
+    <p class="idiom-example" id="idiom-example">
+      <span class="eg"> e.g. </span>
     </p>
   </section>
+  <footer>
+    <div class="right-footer">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLScVjaKuNorC1o71Hiw0mIyWx-rJ7-6vqwe_5oh65jt5vIDIhA/viewform">Submit an idiom</a> &middot; Maintained by <a href="http://raviojha.com" target="_blank">Ravi Ojha</a>
+    </div>
+  </footer>
  </main>
  </body>
 </html>
