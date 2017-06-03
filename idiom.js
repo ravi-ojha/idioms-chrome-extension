@@ -27,7 +27,7 @@ function makeUL(array) {
 function getPrevDate() {
   var d = new Date();
   d.setDate(d.getDate() - 1);
-  query = (d.getDate()-1) + '-' + (d.getMonth()+1) + '-' + d.getFullYear();
+  query = d.getDate() + '-' + (d.getMonth()+1) + '-' + d.getFullYear();
   return query;
 }
 
