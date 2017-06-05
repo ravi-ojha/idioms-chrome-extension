@@ -9,9 +9,22 @@
   }
   main {
     margin-top: 250px;
+
+  }
+
+  .main {
     max-width: 960px;
     margin-right: auto;
     margin-left: auto;
+    height: 100%;
+    width: 100%;
+    display: table;
+  }
+
+  .wrapper {
+      display: table-cell;
+      height: 100%;
+      vertical-align: middle;
   }
 
   .extension-title {
@@ -133,35 +146,37 @@
   <script src="idiom.js"></script>
  </head>
  <body>
- <main>
-  <header class="extension-title">
-    <p> IDIOM OF THE DAY </p>
-  </header>
-  <section id="idiom-body-placeholder" class="idiom-body-placeholder animated-background">
-      <div class="background-masker content-header-end"></div>
-      <div class="background-masker content-top"></div>
-      <div class="background-masker content-first-end"></div>
-      <div class="background-masker content-second-line"></div>
-      <div class="background-masker content-second-end"></div>
-      <div class="background-masker content-third-line"></div>
-      <div class="background-masker content-third-end"></div>
-  </section>
-  <section id="idiom-body" class="idiom-body hidden">
-    <p class="idiom-title" id="idiom-title">
-      ballpark figure
-    </p>
-    <p class="idiom-meaning" id="idiom-meaning">
-      a number which is only approximate, but quite close to the correct number
-    </p>
-    <p class="idiom-example" id="idiom-example">
-      <span class="eg"> e.g. </span>
-    </p>
-  </section>
-  <footer>
-    <div class="right-footer">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLScVjaKuNorC1o71Hiw0mIyWx-rJ7-6vqwe_5oh65jt5vIDIhA/viewform">Submit an idiom</a> &middot; Maintained by <a href="http://raviojha.com" target="_blank">Ravi Ojha</a>
+   <div class="main">
+    <div class="wrapper">
+      <header class="extension-title">
+        <p> IDIOM OF THE DAY </p>
+      </header>
+      <section id="idiom-body-placeholder" class="idiom-body-placeholder animated-background">
+          <div class="background-masker content-header-end"></div>
+          <div class="background-masker content-top"></div>
+          <div class="background-masker content-first-end"></div>
+          <div class="background-masker content-second-line"></div>
+          <div class="background-masker content-second-end"></div>
+          <div class="background-masker content-third-line"></div>
+          <div class="background-masker content-third-end"></div>
+      </section>
+      <section id="idiom-body" class="idiom-body hidden">
+        <p class="idiom-title" id="idiom-title">
+          ballpark figure
+        </p>
+        <p class="idiom-meaning" id="idiom-meaning">
+          a number which is only approximate, but quite close to the correct number
+        </p>
+        <p class="idiom-example" id="idiom-example">
+          <span class="eg"> e.g. </span>
+        </p>
+      </section>
+      <footer>
+        <div class="right-footer">
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScVjaKuNorC1o71Hiw0mIyWx-rJ7-6vqwe_5oh65jt5vIDIhA/viewform">Submit an idiom</a> &middot; Maintained by <a href="http://raviojha.com" target="_blank">Ravi Ojha</a>
+        </div>
+      </footer>
     </div>
-  </footer>
- </main>
+   </div>
  </body>
 </html>
