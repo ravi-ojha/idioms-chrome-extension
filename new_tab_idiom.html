@@ -130,15 +130,54 @@
     text-transform: uppercase;
   }
 
-  footer a, a:visited, a:focus {
+  .right-footer a, a:visited, a:focus {
     cursor: pointer;
     text-decoration: none;
     color: #ccc;
   }
-  footer a:hover {
+
+  .right-footer a:hover {
     cursor: pointer;
     text-decoration: none;
     color: #aaa;
+  }
+
+  .mv-link {
+    margin-left: 20px;
+    vertical-align: middle;
+    width: 20%;
+    float: left;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgba(0, 0, 0, 0.05);
+    padding: 8px;
+  }
+
+  .most-visited-sites a, a:visited, a:focus {
+    margin-left: 20px;
+    vertical-align: middle;
+    width: 20%;
+    float: left;
+    text-decoration: none;
+  }
+
+  .most-visited-sites a:hover {
+    box-shadow: 0 0px 0px 0 rgba(0,0,0,0.1), 0 1px 2px 0 rgba(0,0,0,0.2);
+  }
+
+  .mv-favicon {
+    height: 16px;
+    width: 16px;
+    background-repeat: no-repeat;
+    float: left;
+  }
+
+  .mv-title {
+    -webkit-mask-image: linear-gradient(to right, #000, #000, 100px, transparent);
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    color: rgba(0, 0, 0, 0.5);
   }
 
   </style>
@@ -170,6 +209,9 @@
         <p class="idiom-example" id="idiom-example">
           <span class="eg"> e.g. </span>
         </p>
+      </section>
+      <section id="most-visited-sites" class="most-visited-sites">
+
       </section>
       <footer>
         <div class="right-footer">

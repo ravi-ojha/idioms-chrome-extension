@@ -92,4 +92,52 @@ function getFromLocal() {
   });
 }
 
+
+
+// Most visited websites
+
+
+function createMVLink(data) {
+  // data - dict
+  // data = { title: 'my title', url: 'http://www.google.com'}
+
+  // We are creating a structure like this
+  // <a class="mv-link" href="{url}">
+  //   <div class="mv-favicon"></div>
+  //   <div class="mv-title"></div>
+  // </a>
+
+  // This is parent
+  var mv_link = document.createElement("a");
+  mv_link.setAttribute('class', 'mv-link');
+  mv_link.setAttribute('href', data.url);
+
+  // This is child of anchor tag
+  var mv_favicon = document.createElement("div");
+  mv_favicon.setAttribute('class', 'mv-favicon');
+  mv_favicon.style.backgroundImage = 'url(chrome://favicon/' + data.url + ')';
+
+  mv_link.appendChild(mv_favicon);
+
+  // This is child of anchor tag
+  var mv_title = document.createElement("div");
+  mv_title.setAttribute('class', 'mv-title');
+  mv_title.setAttribute('title', data.title);
+  mv_title.textContent = data.title;
+
+  mv_link.appendChild(mv_title);
+
+  document.getElementById("most-visited-sites").appendChild(mv_link);
+}
+
+function createTopSitesDiv(data) {
+  console.log(data);
+  var mx = Math.min(data.length, 4);
+
+  for(var i=0; i<mx; i++) {
+    createMVLink(data[i]);
+  }
+}
+
 getFromLocal();
+chrome.topSites.get(createTopSitesDiv);
