@@ -131,7 +131,6 @@ function createMVLink(data) {
 }
 
 function createTopSitesDiv(data) {
-  console.log(data);
   var mx = Math.min(data.length, 4);
 
   for(var i=0; i<mx; i++) {
@@ -139,5 +138,7 @@ function createTopSitesDiv(data) {
   }
 }
 
-getFromLocal();
-chrome.topSites.get(createTopSitesDiv);
+if(window.location.href.indexOf('new_tab_idiom.html') !== -1) {
+  getFromLocal();
+  chrome.topSites.get(createTopSitesDiv);
+}

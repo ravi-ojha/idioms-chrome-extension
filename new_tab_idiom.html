@@ -64,16 +64,17 @@
   }
 
   .animated-background {
-      animation-duration: 2s;
-      animation-fill-mode: forwards;
-      animation-iteration-count: infinite;
-      animation-name: placeHolderShimmer;
-      animation-timing-function: linear;
-      background: #f6f7f8;
-      background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
-      background-size: 960px 104px;
-      height: 195px;
-      position: relative;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: linear;
+    background: #f6f7f8;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 960px 104px;
+    height: 195px;
+    position: relative;
+    margin-bottom: 20px;
   }
   .background-masker {
     background: #fff;
@@ -130,7 +131,9 @@
     text-transform: uppercase;
   }
 
-  .right-footer a, a:visited, a:focus {
+  .right-footer a,
+  .right-footer a:visited,
+  .right-footer a:focus {
     cursor: pointer;
     text-decoration: none;
     color: #ccc;
@@ -152,7 +155,13 @@
     padding: 8px;
   }
 
-  .most-visited-sites a, a:visited, a:focus {
+  .most-visited-sites {
+    margin-top: 50px;
+  }
+
+  .most-visited-sites a,
+  .most-visited-sites a:visited,
+  .most-visited-sites a:focus {
     margin-left: 20px;
     vertical-align: middle;
     width: 20%;
@@ -215,7 +224,7 @@
       </section>
       <footer>
         <div class="right-footer">
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLScVjaKuNorC1o71Hiw0mIyWx-rJ7-6vqwe_5oh65jt5vIDIhA/viewform">Submit an idiom</a> &middot; Maintained by <a href="http://raviojha.com" target="_blank">Ravi Ojha</a>
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLScVjaKuNorC1o71Hiw0mIyWx-rJ7-6vqwe_5oh65jt5vIDIhA/viewform" target="_blank">Submit an idiom</a> &middot; Maintained by <a href="http://raviojha.com" target="_blank">Ravi Ojha</a>
         </div>
       </footer>
     </div>
