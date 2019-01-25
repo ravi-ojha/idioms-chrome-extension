@@ -1,7 +1,7 @@
 {
   "name": "Idioms and Phrases",
   "description": "Shows idiom of the day in the new tab.",
-  "version": "0.4",
+  "version": "0.5",
   "incognito": "split",
   "chrome_url_overrides": {
     "newtab": "new_tab_idiom.html"
@@ -16,7 +16,6 @@
     "128": "icon128.png"
   },
   "permissions": [
-    "http://104.197.255.87/*",
     "storage",
     "topSites",
     "chrome://favicon/"
